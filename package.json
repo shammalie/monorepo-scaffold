@@ -1,0 +1,41 @@
+{
+  "name": "my-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A TypeScript monorepo with turborepo, NextJS, Hono, Prisma, tRPC, and shadcn/ui",
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev --parallel",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "test:unit": "turbo test:unit",
+    "test:integration": "turbo test:integration",
+    "clean": "turbo clean",
+    "type-check": "turbo type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "db:generate": "turbo db:generate",
+    "db:push": "turbo db:push",
+    "db:migrate": "turbo db:migrate",
+    "db:studio": "turbo db:studio",
+    "gen:package": "turbo gen package",
+    "gen:tooling": "turbo gen tooling",
+    "gen:app": "turbo gen app"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.5.4",
+    "turbo": "^2.5.4",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ]
+}

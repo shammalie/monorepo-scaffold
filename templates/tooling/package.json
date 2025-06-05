@@ -1,0 +1,20 @@
+{
+  "name": "@repo/{{ dashCase name }}-config",
+  "version": "0.1.0",
+  "private": true,
+  "description": "{{ description }}",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "*.js",
+    "*.json",
+    "*.mjs"
+  ],
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

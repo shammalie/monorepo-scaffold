@@ -1,0 +1,19 @@
+{
+  "name": "@repo/vitest-config",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "unit.js",
+    "integration.js"
+  ],
+  "dependencies": {
+    "vitest": "^1.6.0",
+    "@vitest/ui": "^1.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.12.7"
+  }
+} 
