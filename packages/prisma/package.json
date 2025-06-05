@@ -23,14 +23,19 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
     "@repo/vitest-config": "workspace:*",
-    "@types/node": "^20.12.7",
-    "eslint": "^8.57.0",
-    "tsx": "^4.10.5",
-    "typescript": "^5.4.5",
-    "vitest": "^1.6.0"
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   },
   "eslintConfig": {
-    "extends": ["@repo/eslint-config/package"]
-  }
-} 
+    "extends": [
+      "@repo/eslint-config/package"
+    ]
+  },
+  "prettier": "@repo/prettier-config"
+}

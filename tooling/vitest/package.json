@@ -9,11 +9,11 @@
     "integration.js"
   ],
   "dependencies": {
-    "vitest": "^1.6.0",
-    "@vitest/ui": "^1.6.0"
+    "vitest": "catalog:",
+    "@vitest/ui": "catalog:"
   },
   "devDependencies": {
-    "typescript": "^5.4.5",
-    "@types/node": "^20.12.7"
+    "typescript": "catalog:",
+    "@types/node": "catalog:"
   }
-} 
+}

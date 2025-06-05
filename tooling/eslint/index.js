@@ -1,10 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: [
-    "@typescript-eslint/recommended",
-    "eslint:recommended",
-    "prettier",
-  ],
+  extends: ["@typescript-eslint/recommended", "eslint:recommended", "prettier"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "import"],
   rules: {
@@ -38,4 +34,4 @@ module.exports = {
     "pnpm-lock.yaml",
   ],
   reportUnusedDisableDirectives: true,
-}; 
+};

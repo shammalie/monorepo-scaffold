@@ -5,12 +5,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    },
-    "moduleResolution": "node",
-    "module": "ESNext",
-    "target": "ES2022",
-    "allowSyntheticDefaultImports": true
+    }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist", "**/*.test.*", "**/*.spec.*"]
 }

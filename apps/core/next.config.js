@@ -3,4 +3,4 @@ const nextConfig = {
   transpilePackages: ["@repo/ui", "@repo/trpc", "@repo/prisma"],
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;

@@ -16,9 +16,9 @@ app.get("/health", (c) => {
 
 // Default route
 app.get("/", (c) => {
-  return c.json({ 
+  return c.json({
     message: "Welcome to the Monorepo API",
-    version: "0.1.0"
+    version: "0.1.0",
   });
 });
 
@@ -28,4 +28,4 @@ console.log(`Server is running on port ${port}`);
 serve({
   fetch: app.fetch,
   port,
-}); 
+});

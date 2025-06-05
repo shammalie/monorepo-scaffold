@@ -44,10 +44,29 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
     ],
     actions: [
       {
-        type: "addMany",
-        destination: "packages/{{ dashCase name }}",
-        templateFiles: "templates/package/**/*",
-        base: "templates/package",
+        type: "add",
+        path: "packages/{{ dashCase name }}/package.json",
+        templateFile: "../../templates/package/package.json",
+      },
+      {
+        type: "add",
+        path: "packages/{{ dashCase name }}/tsconfig.json",
+        templateFile: "../../templates/package/tsconfig.json",
+      },
+      {
+        type: "add",
+        path: "packages/{{ dashCase name }}/README.md",
+        templateFile: "../../templates/package/README.md",
+      },
+      {
+        type: "add",
+        path: "packages/{{ dashCase name }}/src/index.ts",
+        templateFile: "../../templates/package/src/index.ts",
+      },
+      {
+        type: "add",
+        path: "packages/{{ dashCase name }}/src/lib/index.ts",
+        templateFile: "../../templates/package/src/lib/index.ts",
       },
     ],
   });
@@ -95,10 +114,19 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
     ],
     actions: [
       {
-        type: "addMany",
-        destination: "tooling/{{ dashCase name }}",
-        templateFiles: "templates/tooling/**/*",
-        base: "templates/tooling",
+        type: "add",
+        path: "tooling/{{ dashCase name }}/package.json",
+        templateFile: "../../templates/tooling/package.json",
+      },
+      {
+        type: "add",
+        path: "tooling/{{ dashCase name }}/index.js",
+        templateFile: "../../templates/tooling/index.js",
+      },
+      {
+        type: "add",
+        path: "tooling/{{ dashCase name }}/README.md",
+        templateFile: "../../templates/tooling/README.md",
       },
     ],
   });
@@ -147,8 +175,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       {
         type: "addMany",
         destination: "apps/{{ dashCase name }}",
-        templateFiles: "templates/app-{{ type }}/**/*",
-        base: "templates/app-{{ type }}",
+        templateFiles: "../../templates/app-{{ type }}/**/*",
+        base: "../../templates/app-{{ type }}",
       },
     ],
   });
