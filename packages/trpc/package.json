@@ -10,6 +10,9 @@
     "./server": "./src/server.ts"
   },
   "scripts": {
+    "build": "tsc --noEmit",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsc --build",
     "lint": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit"
   },
@@ -27,6 +30,7 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
     "@repo/vitest-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",

@@ -1,0 +1,11 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@monorepo-scaffold-db:5432/demo?schema=dev
+    depends_on:
+      - db

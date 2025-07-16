@@ -1,12 +1,15 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@repo/ui/components/*": ["../../packages/ui/src/components/*"],
-      "@repo/ui/lib/*": ["../../packages/ui/src/lib/*"]
-    },
+    "allowJs": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "es6"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "target": "ES2022",
     "plugins": [
       {
         "name": "next"

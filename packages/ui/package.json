@@ -7,11 +7,23 @@
   "exports": {
     "./globals.css": "./src/globals.css",
     "./postcss.config": "./postcss.config.mjs",
-    "./components/*": "./src/components/*",
-    "./lib/*": "./src/lib/*",
-    "./hooks/*": "./src/hooks/*"
+    "./hooks/*": {
+      "types": "./dist/src/hooks/*.d.ts",
+      "default": "./src/hooks/*.ts"
+    },
+    "./lib/*": {
+      "types": "./dist/src/lib/*.d.ts",
+      "default": "./src/lib/*.ts"
+    },
+    "./components/*": {
+      "types": "./dist/src/components/*.d.ts",
+      "default": "./src/components/*.tsx"
+    }
   },
   "scripts": {
+    "build": "tsc --noEmit",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsc --build",
     "lint": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit"
   },
@@ -65,6 +77,8 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/vitest-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@tailwindcss/vite": "^4.0.0-alpha.26",
     "@tailwindcss/postcss": "^4",
     "@types/node": "catalog:",
